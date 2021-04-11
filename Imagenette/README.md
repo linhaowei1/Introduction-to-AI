@@ -18,7 +18,7 @@ For testing:
 python runner.py --cuda='cuda:4' --model='wide_resnet50_2' --model_params_path='./wide_resnet50_2_from_scratch_lr=4.pth' --log_dir='log_wide_resnet50_2_from_scratch_lr=4' --mode='test'
 ```
 
-Final acc: $92\pm0.8$%。
+Final acc: $92.2\pm0.8$%。
 
 The trianed model is too big, so I didn't put it on github.
 
