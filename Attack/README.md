@@ -17,3 +17,12 @@ Hyper-parameters for CIFAR-10:
 - The limit on the perturbation size is ϵ=0.031 for both white-box and black-box attack.
 - The inner iteration for PGD is 10.
 - You should choose the step-size for PGD by yourself to reach the following success rate.
+
+## White Attack
+
+FGSM : use several ways to boost performance. 
+
+- use nll_loss (we can get more sharp gradient without softmax) and of course, cross_entropy loss is tried, too.
+- add random noise : choose uniform noise U(-eps, eps) and N(0, eps)
+
+PGD : simple iterating version of FGSM
