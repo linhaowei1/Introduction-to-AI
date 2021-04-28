@@ -11,7 +11,7 @@ from tensorboardX import SummaryWriter
 import random
 from utils import get_args
 
-def fgsm(eps=0.031, criterion=F.nll_loss, bool_rand_noise=True):
+def fgsm(eps=0.031, criterion=F.nll_loss, bool_rand_noise=False):
     # fgsm运行时间：5秒
     # loss=ce，bool_noise=True: 0.93103
     # loss=ce, bool_noise=False: 0.86524
@@ -51,6 +51,10 @@ def fgsm(eps=0.031, criterion=F.nll_loss, bool_rand_noise=True):
         eta = torch.clamp(perturbed_image.data - image.data, -eps, eps)
         perturbed_image = image + eta
         perturbed_image = torch.clamp(perturbed_image, 0, 1)
+
+        ## 可视化图像
+        writer.add_image('image', image[0], batch)
+        writer.add_image('perturb_image', perturbed_image[0], batch)
 
         outp_2 = model(perturbed_image)
         pred_2 = torch.max(outp_2, dim=1)[1]
@@ -94,6 +98,10 @@ def pgd(eps=0.031, step_size=0.003, epoch=10, criterion=F.cross_entropy, bool_ra
             eta = torch.clamp(perturbed_image.data - image.data, -eps, eps)
             perturbed_image = image + eta
             perturbed_image = torch.clamp(perturbed_image, 0, 1)
+       
+        ## 可视化图像
+        writer.add_image('image', image[0], batch)
+        writer.add_image('perturb_image', perturbed_image[0], batch)
 
         outp_2 = model(perturbed_image)
         pred_2 = torch.max(outp_2, dim=1)[1]
@@ -118,6 +126,7 @@ if __name__ == '__main__':
         model.to(device)
 
         model.load_state_dict(torch.load('./CIFAR10_PreActResNet18.pth', map_location=device)['state_dict'])
+        '''
         data_train = datasets.CIFAR10(
             root='/home/linhw/myproject/data/CIFAR10',
             train=True,
@@ -126,6 +135,7 @@ if __name__ == '__main__':
             ]),
             download=True
         )
+        '''
         data_test = datasets.CIFAR10(
             root='/home/linhw/myproject/data/CIFAR10',
             train=False,
@@ -137,12 +147,14 @@ if __name__ == '__main__':
 
         number_worker = min(
             [os.cpu_count(), args.batch_size if args.batch_size > 1 else 0, 8])
-
+        '''
         train_loader = torch.utils.data.DataLoader(data_train,
                                                    batch_size=args.batch_size, shuffle=True,
                                                    num_workers=number_worker)
+        '''
         test_loader = torch.utils.data.DataLoader(data_test,
                                                   batch_size=args.batch_size, shuffle=True,
                                                   num_workers=number_worker)
         model.eval()
         fgsm()
+        
