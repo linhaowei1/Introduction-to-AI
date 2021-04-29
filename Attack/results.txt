@@ -10,43 +10,6 @@ dataset=cifar	attack=fgsm	noise=True	succ_rate=0.9277465833245048	loss=nll
 dataset=cifar	attack=fgsm	noise=False	succ_rate=0.8937387435109652	loss=nll
 dataset=cifar	attack=pgd	noise=True	succ_rate=0.9997881131475792	stepnumber=10	stepsize=0.003	loss=nll
 dataset=cifar	attack=pgd	noise=False	succ_rate=0.9998940565737896	stepnumber=10	stepsize=0.003	loss=nll
-dataset=MNIST	attack=mi_fgsm	noise=True	succ_rate=0.9768913895307947	stepnumber=10	stepsize=0.25	loss=ce
-dataset=MNIST	attack=mi_fgsm	noise=False	succ_rate=0.9429317793630061	stepnumber=10	stepsize=0.25	loss=ce
-dataset=MNIST	attack=fgsm	noise=True	succ_rate=0.6905455641515121	loss=ce
-dataset=MNIST	attack=fgsm	noise=False	succ_rate=0.4674972370139656	loss=ce
-dataset=MNIST	attack=pgd	noise=True	succ_rate=0.9870390836933588	stepnumber=10	stepsize=0.25	loss=ce
-dataset=MNIST	attack=pgd	noise=False	succ_rate=0.9827187782578117	stepnumber=10	stepsize=0.25	loss=ce
-dataset=MNIST	attack=mi_fgsm	noise=True	succ_rate=1.0	stepnumber=10	stepsize=0.25	loss=nll
-dataset=MNIST	attack=mi_fgsm	noise=False	succ_rate=1.0	stepnumber=10	stepsize=0.25	loss=nll
-dataset=MNIST	attack=fgsm	noise=True	succ_rate=0.8754144479051542	loss=nll
-dataset=MNIST	attack=fgsm	noise=False	succ_rate=0.8008640610871094	loss=nll
-dataset=MNIST	attack=pgd	noise=True	succ_rate=0.9813121671857732	stepnumber=10	stepsize=0.25	loss=nll
-dataset=MNIST	attack=pgd	noise=False	succ_rate=0.9757861951170501	stepnumber=10	stepsize=0.25	loss=nll
-dataset=cifar	attack=pgd	noise=True	succ_rate=0.5324716601334887	stepnumber=10	stepsize=0.000375	loss=nll
-dataset=cifar	attack=pgd	noise=True	succ_rate=1.0	stepnumber=10	stepsize=0.0075	loss=nll
-dataset=cifar	attack=pgd	noise=True	succ_rate=1.0	stepnumber=10	stepsize=0.015	loss=nll
-dataset=cifar	attack=pgd	noise=True	succ_rate=0.9997881131475792	stepnumber=10	stepsize=0.003	loss=nll
-dataset=cifar	attack=pgd	noise=True	succ_rate=1.0	stepnumber=10	stepsize=0.006	loss=nll
-dataset=cifar	attack=pgd	noise=True	succ_rate=1.0	stepnumber=10	stepsize=0.012	loss=nll
-dataset=MNIST	attack=pgd	noise=True	succ_rate=0.999698583341706	stepnumber=10	stepsize=0.03125	loss=nll
-dataset=MNIST	attack=pgd	noise=True	succ_rate=1.0	stepnumber=10	stepsize=0.0625	loss=nll
-dataset=MNIST	attack=pgd	noise=True	succ_rate=0.999698583341706	stepnumber=10	stepsize=0.125	loss=nll
-dataset=MNIST	attack=pgd	noise=True	succ_rate=0.9813121671857732	stepnumber=10	stepsize=0.25	loss=nll
-dataset=MNIST	attack=pgd	noise=True	succ_rate=0.8585351150406912	stepnumber=10	stepsize=0.5	loss=nll
-
-
-dataset=cifar	attack=mi_fgsm	noise=True	succ_rate=0.9996821697213688	stepnumber=10	stepsize=0.003	loss=ce
-dataset=cifar	attack=mi_fgsm	noise=False	succ_rate=0.9998940565737896	stepnumber=10	stepsize=0.003	loss=ce
-dataset=cifar	attack=fgsm	noise=True	succ_rate=0.9106896917046298	loss=ce
-dataset=cifar	attack=fgsm	noise=False	succ_rate=0.8655577921389978	loss=ce
-dataset=cifar	attack=pgd	noise=True	succ_rate=0.9997881131475792	stepnumber=10	stepsize=0.003	loss=ce
-dataset=cifar	attack=pgd	noise=False	succ_rate=1.0	stepnumber=10	stepsize=0.003	loss=ce
-dataset=cifar	attack=mi_fgsm	noise=True	succ_rate=0.9996821697213688	stepnumber=10	stepsize=0.003	loss=nll
-dataset=cifar	attack=mi_fgsm	noise=False	succ_rate=0.9997881131475792	stepnumber=10	stepsize=0.003	loss=nll
-dataset=cifar	attack=fgsm	noise=True	succ_rate=0.9277465833245048	loss=nll
-dataset=cifar	attack=fgsm	noise=False	succ_rate=0.8937387435109652	loss=nll
-dataset=cifar	attack=pgd	noise=True	succ_rate=0.9997881131475792	stepnumber=10	stepsize=0.003	loss=nll
-dataset=cifar	attack=pgd	noise=False	succ_rate=0.9998940565737896	stepnumber=10	stepsize=0.003	loss=nll
 dataset=MNIST	attack=mi_fgsm	noise=True	succ_rate=0.9677484175625439	stepnumber=10	stepsize=0.1	loss=ce
 dataset=MNIST	attack=mi_fgsm	noise=False	succ_rate=0.9288656686426203	stepnumber=10	stepsize=0.1	loss=ce
 dataset=MNIST	attack=fgsm	noise=True	succ_rate=0.6905455641515121	loss=ce
@@ -59,6 +22,7 @@ dataset=MNIST	attack=fgsm	noise=True	succ_rate=0.8754144479051542	loss=nll
 dataset=MNIST	attack=fgsm	noise=False	succ_rate=0.8008640610871094	loss=nll
 dataset=MNIST	attack=pgd	noise=True	succ_rate=1.0	stepnumber=10	stepsize=0.1	loss=nll
 dataset=MNIST	attack=pgd	noise=False	succ_rate=1.0	stepnumber=10	stepsize=0.1	loss=nll
+
 dataset=cifar	attack=pgd	noise=True	succ_rate=0.2608327153300138	stepnumber=10	stepsize=0.0001875	loss=nll
 dataset=cifar	attack=pgd	noise=True	succ_rate=0.5324716601334887	stepnumber=10	stepsize=0.000375	loss=nll
 dataset=cifar	attack=pgd	noise=True	succ_rate=1.0	stepnumber=10	stepsize=0.0075	loss=nll

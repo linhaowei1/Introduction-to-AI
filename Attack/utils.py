@@ -7,9 +7,9 @@ import argparse
 
 def get_args():
     parser = argparse.ArgumentParser()
-    parser.add_argument('--lr', type=float, default=1e-5,
+    parser.add_argument('--lr', type=float, default=1e-1,
                         help='initial learning rate')
-    parser.add_argument('--epochs', type=int, default=10000,
+    parser.add_argument('--epochs', type=int, default=350,
                         help='upper epoch limit')
     parser.add_argument('--seed', type=int, default=1111,
                         help='random seed')
@@ -46,4 +46,6 @@ def get_args():
                         help='stepsize')
     parser.add_argument('--step_number', type=int, default=10,
                         help='step number')
+    parser.add_argument('--weight_decay', '-w', default=5e-4, type=float, help='weight_decay')
+
     return parser.parse_args()
