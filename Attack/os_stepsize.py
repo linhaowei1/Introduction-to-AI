@@ -1,0 +1,16 @@
+import os
+os.system('python white_runner.py --cuda=cuda:1 --model=PreActResNet18 --epsilon=0.031 --noise --dataset=cifar --attack=pgd --stepsize=0.0001875 --loss=nll')
+os.system('python white_runner.py --cuda=cuda:1 --model=PreActResNet18 --epsilon=0.031 --noise --dataset=cifar --attack=pgd --stepsize=0.000375 --loss=nll')
+os.system('python white_runner.py --cuda=cuda:1 --model=PreActResNet18 --epsilon=0.031 --noise --dataset=cifar --attack=pgd --stepsize=0.0075 --loss=nll')
+os.system('python white_runner.py --cuda=cuda:1 --model=PreActResNet18 --epsilon=0.031 --noise --dataset=cifar --attack=pgd --stepsize=0.015 --loss=nll')
+os.system('python white_runner.py --cuda=cuda:1 --model=PreActResNet18 --epsilon=0.031 --noise --dataset=cifar --attack=pgd --stepsize=0.003 --loss=nll')
+os.system('python white_runner.py --cuda=cuda:1 --model=PreActResNet18 --epsilon=0.031 --noise --dataset=cifar --attack=pgd --stepsize=0.006 --loss=nll')
+os.system('python white_runner.py --cuda=cuda:1 --model=PreActResNet18 --epsilon=0.031 --noise --dataset=cifar --attack=pgd --stepsize=0.012 --loss=nll')
+
+os.system('python white_runner.py --cuda=cuda:1 --model=small_cnn --epsilon=0.3 --noise --dataset=MNIST --attack=pgd --stepsize=0.00625 --loss=nll')
+os.system('python white_runner.py --cuda=cuda:1 --model=small_cnn --epsilon=0.3 --noise --dataset=MNIST --attack=pgd --stepsize=0.0125 --loss=nll')
+os.system('python white_runner.py --cuda=cuda:1 --model=small_cnn --epsilon=0.3 --noise --dataset=MNIST --attack=pgd --stepsize=0.025 --loss=nll')
+os.system('python white_runner.py --cuda=cuda:1 --model=small_cnn --epsilon=0.3 --noise --dataset=MNIST --attack=pgd --stepsize=0.05 --loss=nll')
+os.system('python white_runner.py --cuda=cuda:1 --model=small_cnn --epsilon=0.3 --noise --dataset=MNIST --attack=pgd --stepsize=0.1 --loss=nll')
+os.system('python white_runner.py --cuda=cuda:1 --model=small_cnn --epsilon=0.3 --noise --dataset=MNIST --attack=pgd --stepsize=0.2 --loss=nll')
+os.system('python white_runner.py --cuda=cuda:1 --model=small_cnn --epsilon=0.3 --noise --dataset=MNIST --attack=pgd --stepsize=0.4 --loss=nll')

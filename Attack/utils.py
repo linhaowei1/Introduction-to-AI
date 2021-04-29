@@ -21,8 +21,6 @@ def get_args():
                         help='choose the mode for runner. mode availiable = train/test')
     parser.add_argument('--pretrain', dest='pretrain', action='store_true',
                         help='use pretrained model')
-    parser.add_argument('--model', type=str, default='resnet50',
-                        help='model for the task')
     parser.add_argument('--save_path', type=str, default='./resNet50(from_scratch).pth',
                         help='save the model here')
     parser.add_argument('--model_params_path', type=str, default='./resnet50-pre.pth',
@@ -31,4 +29,21 @@ def get_args():
                         help='term added to the denominator to improve numerical stability')
     parser.add_argument('--log_dir', type=str, default='from_scratch_resnet50',
                         help='save logs')
+    parser.add_argument('--model', type=str, default='PreActResNet18',
+                        help='use model')
+    parser.add_argument('--epsilon', type=float, default=0.031,
+                        help='the attack epsilon')
+    parser.add_argument('--noise', dest='noise', action='store_true',
+                        help='use random noise to attack')
+    parser.add_argument('--loss', type=str, default='ce',
+                        help='use loss')
+    parser.add_argument('--dataset', type=str, default='cifar',
+                        help='which dataset to use')
+    parser.add_argument('--attack', type=str, default='fgsm',
+                        help='which attack method to use')
+    # MNIST 用0.25， CIFAR用0.003
+    parser.add_argument('--stepsize', type=float, default=0.003,
+                        help='stepsize')
+    parser.add_argument('--step_number', type=int, default=10,
+                        help='step number')
     return parser.parse_args()
